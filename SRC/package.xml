@@ -3,6 +3,8 @@
     <types>
         <members>DreamWorld</members>
 	<members>HelloWorld</members>
+	<members>StudentInfo</members>
+        <members>StudentQuery</members>
         <name>ApexClass</name>
     </types>
     <types>
@@ -12,12 +14,24 @@
     <types>
         <members>Dream_World__c</members>
 	<members>Hello__c</members>
+	<members>Student__c</members>
         <name>CustomObject</name>
+    </types>
+	<types>
+        <members>Student__c-Registrar Layout</members>
+        <members>Student__c-Teacher Layout</members>
+        <name>Layout</name>
     </types>
     <types>
         <members>Dream_World__c</members>
 	<members>Hello__c</members>
+	<members>Student__c</members>
         <name>CustomTab</name>
+    </types>
+	<types>
+        <members>Student__c.Registrar_Layout</members>
+        <members>Student__c.Teacher_Layout</members>
+        <name>RecordType</name>
     </types>
     <version>53.0</version>
 </Package>
