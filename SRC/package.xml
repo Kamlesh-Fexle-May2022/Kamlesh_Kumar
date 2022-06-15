@@ -38,8 +38,8 @@
 	<name>Profile</name>
     </types>
     <types>
-		<members>*</members>
-		<name>PermissionSet</name>
+	<members>*</members>
+	<name>PermissionSet</name>
     </types>
   <version>53.0</version>
 </Package>
