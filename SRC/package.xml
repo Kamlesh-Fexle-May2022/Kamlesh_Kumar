@@ -2,10 +2,10 @@
 <Package xmlns="http://soap.sforce.com/2006/04/metadata">
     <types>
         <members>DreamWorld</members>
-	    <members>HelloWorld</members>
-	    <members>StudentInfo</members>
+	<members>HelloWorld</members>
+	<members>StudentInfo</members>
         <members>StudentQuery</members>
-		<members>DownTriangleStarPattern</members>
+        <members>DownTriangleStarPattern</members>
         <members>HelloWorldTestClass</members>
         <members>LeftTrianglePascal</members>
         <members>MyHelloWorld</members>
@@ -21,8 +21,8 @@
     </types>
     <types>
         <members>Dream_World__c</members>
-	    <members>Hello__c</members>
-	    <members>Student__c</members>
+	<members>Hello__c</members>
+	<members>Student__c</members>
         <members>Account</members>
         <members>College__c</members>
         <members>Contact</members>
@@ -33,7 +33,7 @@
         <members>Subject__c</members>
         <members>Teacher__c</members>
         <members>Year_of_Class__c</members>
-		<members>Book__c</members>
+        <members>Book__c</members>
         <name>CustomObject</name>
     </types>
 	<types>
@@ -53,16 +53,16 @@
     </types>
     <types>
         <members>Dream_World__c</members>
-	    <members>Hello__c</members>
-	    <members>Student__c</members>
- 	    <members>College__c</members>
+	<members>Hello__c</members>
+	<members>Student__c</members>
+ 	<members>College__c</members>
         <members>Employee__c</members>
         <members>Pan_Card__c</members>
-	    <members>Subject__c</members>
+	<members>Subject__c</members>
         <members>Teacher__c</members>
         <members>Year_of_Class__c</members>
         <members>StudentSubject__c</members>
-		<members>Book__c</members>
+        <members>Book__c</members>
         <name>CustomTab</name>
     </types>
 	<types>
