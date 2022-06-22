@@ -5,11 +5,18 @@
 	<members>HelloWorld</members>
 	<members>StudentInfo</members>
         <members>StudentQuery</members>
+        <members>HelloWorldTestClass</members>
+        <members>LeftTrianglePascal</members>
+        <members>MyHelloWorld</members>
         <name>ApexClass</name>
     </types>
     <types>
         <members>Dream_World__c.Dream_World_Title__c</members>
         <name>CustomField</name>
+    </types>
+    <types>
+        <members>HelloWorldTrigger</members>
+        <name>ApexTrigger</name>
     </types>
     <types>
         <members>Dream_World__c</members>
@@ -25,9 +32,10 @@
         <members>Subject__c</members>
         <members>Teacher__c</members>
         <members>Year_of_Class__c</members>
+        <members>Book__c</members>
         <name>CustomObject</name>
     </types>
-	<types>
+    <types>
         <members>Student__c-Registrar Layout</members>
         <members>Student__c-Teacher Layout</members>
         <members>Account-Account Layout</members>
@@ -53,19 +61,20 @@
         <members>Teacher__c</members>
         <members>Year_of_Class__c</members>
         <members>StudentSubject__c</members>
+	<members>Book__c</members>
         <name>CustomTab</name>
     </types>
-	<types>
+    <types>
         <members>Student__c.Registrar_Layout</members>
         <members>Student__c.Teacher_Layout</members>
         <name>RecordType</name>
     </types>
     <types>
-	<members>*</members>
+        <members>*</members>
 	<name>Profile</name>
     </types>
     <types>
-	<members>*</members>
+        <members>*</members>
 	<name>PermissionSet</name>
     </types>
   <version>53.0</version>
