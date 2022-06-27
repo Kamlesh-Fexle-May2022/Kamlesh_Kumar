@@ -1,22 +1,46 @@
+/**
+*  Description     :  Apex Data Types
+*
+*  Created By      :  Kamlesh Kumar
+*
+*  Created Date    :  06/24/2022
+*
+*  Revision Logs   :    V1.0 - Created - Kamlesh Kumar 
+*
+**/
 public with sharing class PracticeDataTypesAndMethods {
+    /**
+     * 
+     *   @description    :  All Data Types And Methods
+     *  
+     *
+     *   @return         :   void
+     *
+     *   @revision Log   :   V1.1 - Created  - 06/24/2022 - Developer Name - Kamlesh Kumar
+     *  
+     **/
     // Date Time Method
     public static void dateMethod(){
         Date myDate = Date.newInstance(2022,6,23);
         System.debug('Today Date : ' + myDate);
     }
+    
     public static void dateMethod1(){
         Date myDate = Date.newInstance(2022,6,23);
         Date newDate = myDate.addYears(2);
         system.debug('New Date : '+ newDate);
     }
+    
     public static void dateMethod_2(){
         Date myDate = Date.today();
         system.debug(myDate);
     }
+    
     public static void dateTimeMethod_1(){
         DateTime myDateTime = DateTime.now();
         system.debug(myDateTime);
     }
+    
     public static void dateTimeMethod_2(){
         DateTime myDateTime = DateTime.newInstance(1993,6,6,3,3,3);
         system.debug(myDateTime);
@@ -75,8 +99,7 @@ public with sharing class PracticeDataTypesAndMethods {
         Map<String,String> myString = new Map<String,String>{'a'=> 'b', 'C' => 'd'.toLowerCase()};
         system.debug(myString);
     }
-   
-   
+    
     public static void mapMethod_1(){
         Map<String,String> country_Currencies = new Map<String,String>();
         map<ID, Set<String>> m = new Map<Id, set<String>>();
@@ -97,11 +120,11 @@ public with sharing class PracticeDataTypesAndMethods {
         myList.add('Aakash');
         system.debug(myList);
     }
+    
     public static void listMethod_2(){
         List<String> myList = new List<String>{'Bhopal','Indore','Jabalpur','Betul'};
         system.debug(myList);
     }
-
     
     // Set Method
     public static void setMethod_1(){
