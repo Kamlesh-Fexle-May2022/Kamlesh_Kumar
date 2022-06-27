@@ -9,7 +9,7 @@
 *
 **/
 public with sharing class PracticeDataTypesAndMethods {
-	/**
+     /**
      * 
      *   @description    :  All Data Types And Methods
      *  
@@ -45,7 +45,7 @@ public with sharing class PracticeDataTypesAndMethods {
         DateTime myDateTime = DateTime.newInstance(1993,6,6,3,3,3);
         system.debug(myDateTime);
     
-	//Boolean
+    //Boolean
     public static void bolleanExample(){
         Boolean isWinner = True;
         system.debug(isWinner);
