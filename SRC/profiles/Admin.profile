@@ -1,6 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Profile xmlns="http://soap.sforce.com/2006/04/metadata">
 	<classAccesses>
+        <apexClass>CallByValueAndReference</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>Constructors</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>LoopsAndConditionalStatements</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>MethodOverLoading</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>MethodOverriding</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+	<classAccesses>
         <apexClass>ExpressionsAndOperators</apexClass>
         <apexClass>PracticeDataTypesAndMethods</apexClass>
         <enabled>true</enabled>
