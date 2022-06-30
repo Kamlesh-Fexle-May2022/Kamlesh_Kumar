@@ -12,11 +12,11 @@
         <members>StudentRecord</members>
 	<members>HelloWorld</members>
 	<members>StudentInfo</members>
-		<members>ExpressionsAndOperators</members>
-	    <members>PracticeDataTypesAndMethods</members>
+	<members>ExpressionsAndOperators</members>
+	<members>PracticeDataTypesAndMethods</members>
         <members>StudentRecord</members>
-	    <members>HelloWorld</members>
-	    <members>StudentInfo</members>
+	<members>HelloWorld</members>
+	<members>StudentInfo</members>
         <members>StudentQuery</members>
         <members>HelloWorldTestClass</members>
         <members>LeftTrianglePascal</members>
