@@ -9,12 +9,12 @@
 *
 **/
 public with sharing class ThisKeyword {
-    //**********Method M*********
-    public void m() {
+    // callByThisKeyword Method 
+    public void callByThisKeyword() {
         System.debug('Hello M'); 
     } 
-    //*********Method N*****************
-    public void n() {  
+    // performThisKeyword Method 
+    public void performThisKeyword() {  
         System.debug('Hello N');  
         this.m();  
    }  

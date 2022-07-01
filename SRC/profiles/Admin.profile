@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Profile xmlns="http://soap.sforce.com/2006/04/metadata">
-	<classAccesses>
-        <apexClass>DiscountOnProduct</apexClass>
+    <classAccesses>
+    	<apexClass>DiscountOnProduct</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
@@ -16,7 +16,7 @@
         <apexClass>ThisKeyword</apexClass>
         <enabled>true</enabled>
     </classAccesses>
-	<classAccesses>
+    <classAccesses>
         <apexClass>CallByValueAndReference</apexClass>
         <enabled>true</enabled>
     </classAccesses>
@@ -36,7 +36,7 @@
         <apexClass>MethodOverriding</apexClass>
         <enabled>true</enabled>
     </classAccesses>
-	<classAccesses>
+    <classAccesses>
         <apexClass>ExpressionsAndOperators</apexClass>
         <apexClass>PracticeDataTypesAndMethods</apexClass>
         <enabled>true</enabled>

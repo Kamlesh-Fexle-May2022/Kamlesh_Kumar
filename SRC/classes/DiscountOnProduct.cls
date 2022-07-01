@@ -12,25 +12,25 @@ public with sharing class DiscountOnProduct {
     public virtual interface PurchaseOrder {
         Double discount(Double Price);
     }
-    //*****************CustomerPurchaseOrder class**************
+    // CustomerPurchaseOrder class
     public class CustomerPurchaseOrder implements PurchaseOrder {
         public Double discount(Double Price) {
             return 0.9 * Price;
         }
     }
-    //*******************EmployeePurchaseOrder Class ***************
+    // EmployeePurchaseOrder Class 
     public class EmployeePurchaseOrder implements PurchaseOrder {
         public Double discount(Double price) {
             return 0.8 * price;
         }
     }
-    //********************SellerPurchaseOrder Class**************
+    // SellerPurchaseOrder Class
     public class SellerPurchaseOrder implements PurchaseOrder {
         public Double discount(Double price) {
             return 0.7 * price;
         }
     }
-    //********************ProcessPurchaseOrder Class**************
+    // ProcessPurchaseOrder Class
     public class ProcessPurchaseOrder {
         public ProcessPurchaseOrder(){
         PurchaseOrder order1 = new CustomerPurchaseOrder();
@@ -41,7 +41,7 @@ public with sharing class DiscountOnProduct {
         ProcessOrder(order2,'20 % discount');
         ProcessOrder(order3,'30 % discount');
     }
-    //***************** Methode**********************
+    // processOrder Method 
     public void processOrder(PurchaseOrder order,String str){
         System.debug('Price :::'+order.discount(500)+str);
     }
