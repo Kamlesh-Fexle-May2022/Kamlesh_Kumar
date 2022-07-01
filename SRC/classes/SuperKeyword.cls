@@ -9,14 +9,14 @@
 *
 **/
 public with sharing class SuperKeyword {
-    //*********Parent Class********* 
+    // Parent Class 
     public virtual class Animal{
     
         public virtual void eat(){
         System.debug('eating...');
         }  
     }  
-    //*****************Child Class Inheriting Parent Class
+    // Child Class Inheriting Parent Class
     public virtual class Dog extends Animal {
 
         public override virtual void eat(){
