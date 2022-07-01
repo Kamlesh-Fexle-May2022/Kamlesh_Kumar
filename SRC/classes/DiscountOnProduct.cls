@@ -41,7 +41,7 @@ public with sharing class DiscountOnProduct {
         ProcessOrder(order2,'20 % discount');
         ProcessOrder(order3,'30 % discount');
     }
-    // Methode
+    // processOrder Method 
     public void processOrder(PurchaseOrder order,String str){
         System.debug('Price :::'+order.discount(500)+str);
     }
