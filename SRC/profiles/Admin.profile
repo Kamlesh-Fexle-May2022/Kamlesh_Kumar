@@ -16,7 +16,7 @@
         <apexClass>ThisKeyword</apexClass>
         <enabled>true</enabled>
     </classAccesses>
-	<classAccesses>
+    <classAccesses>
         <apexClass>CallByValueAndReference</apexClass>
         <enabled>true</enabled>
     </classAccesses>
@@ -36,7 +36,7 @@
         <apexClass>MethodOverriding</apexClass>
         <enabled>true</enabled>
     </classAccesses>
-	<classAccesses>
+    <classAccesses>
         <apexClass>ExpressionsAndOperators</apexClass>
         <apexClass>PracticeDataTypesAndMethods</apexClass>
         <enabled>true</enabled>
