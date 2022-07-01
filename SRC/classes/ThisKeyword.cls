@@ -9,11 +9,11 @@
 *
 **/
 public with sharing class ThisKeyword {
-    //**********Method M*********
+    // Method M
     public void m() {
         System.debug('Hello M'); 
     } 
-    //*********Method N*****************
+    // Method N
     public void n() {  
         System.debug('Hello N');  
         this.m();  
