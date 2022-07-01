@@ -2,11 +2,20 @@
 <Package xmlns="http://soap.sforce.com/2006/04/metadata">
     <types>
         <members>DreamWorld</members>
+	<members>DiscountOnProduct</members>
+        <members>InstanceOfKeyword</members>
+        <members>SuperKeyword</members>
+        <members>ThisKeyword</members>
 	<members>CallByValueAndReference</members>
         <members>Constructors</members>
         <members>LoopsAndConditionalStatements</members>
         <members>MethodOverLoading</members>
         <members>MethodOverriding</members>
+	<members>ExpressionsAndOperators</members>
+	<members>PracticeDataTypesAndMethods</members>
+        <members>StudentRecord</members>
+	<members>HelloWorld</members>
+	<members>StudentInfo</members>
 	<members>ExpressionsAndOperators</members>
 	<members>PracticeDataTypesAndMethods</members>
         <members>StudentRecord</members>
