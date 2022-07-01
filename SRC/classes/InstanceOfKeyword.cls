@@ -9,7 +9,7 @@
 *
 **/
 public with sharing class InstanceOfKeyword {
-    //*************Method********************
+    // Constructor
     Public InstanceOfKeyword() {
         sObject s = new Contact();
         //Account a = (Account)s;
