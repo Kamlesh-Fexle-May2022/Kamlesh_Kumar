@@ -17,34 +17,40 @@ public with sharing class AccountInsertRecord {
     **/
     public static void accountInsertRecord() {
         List<Account> accList = new List<Account>();
-            for(Integer i=1;i<20;i++)
-            {
-                Account a = new Account(Name = 'Test Account'+i);
-                accList.add(a);
-            }
+        for(Integer i=1;i<20;i++)
+        {
+           Account a = new Account(Name = 'Test Account '+i);
+           accList.add(a);
+        }
         insert accList;
+        List<Account> lst = AccountInsertRecord.accountUpdateRecord(accList);
+        for(Account acc2 : lst){
+            System.debug(acc2.Name);
+        }
+        AccountInsertRecord.accountUpsertRecord(accList);
     }
     
-    public static void accountUpdateRecord() {
-        List<Account> accList = [Select Name from Account where CreatedDate = TODAY];
-            for(Account a : accList)
-            {
-             	a.Name = a.Name + 'Update';
-            }
+    public static List<Account> accountUpdateRecord(List<Account> accList) {
+        List<Account> accList1 = [Select Name from Account where CreatedDate = TODAY];
+        for(Account a : accList)
+        {
+          a.Name = a.Name + ' Update';
+        }
         update accList;
+        return accList;
     }
     
-    public static void accountUpsertRecord() {
-        List<Account> accList = [Select Name,NumberOfEmployees from Account where CreatedDate = TODAY];
-            for(Account a : accList)
-            {
-             	a.NumberOfEmployees = 1001;
-            }
-        	for(Integer i=0;i<=50;i++)
-            {
-                Account a = new Account(Name = 'NewRecords in Upsert'+i);
-                accList.add(a);
-            }
+    public static void accountUpsertRecord(List<Account> accList) {
+        Integer i=1;
+      	for(Account acc1 : accList)
+        {
+            acc1.Name = 'NewRecords in Upsert ' + i;
+            acc1.NumberOfEmployees = 1001;
+            i++;
+        }
         upsert accList;
+        for(Account acc2 : accList){
+            System.debug(acc2.Name + ' ' + acc2.NumberOfEmployees);
+        }
     }
 }
