@@ -24,7 +24,11 @@ public with sharing class AccountInsertRecord {
         System.debug(acc);
         //insert acc;
         //delete acc;
-        update acc;
-
+        List<Account> acc_4 = [SELECT Name FROM Account Where Name = 'Shahil'];
+        for(Account accName : acc_4) {
+            if(accName.Name.equals('Shahil')) {
+                accName.Name = 'Aron';
+            }
+        }
     }
 }
