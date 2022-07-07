@@ -71,13 +71,19 @@ public with sharing class CodeWithCountryWithStateAndDistrict {
         }
             if(!mapWithCountryWithStateWithDistrict.isEmpty()){
                 for(String countryCode :mapWithCountryWithStateWithDistrict.keySet()){
+                    if(!mapWithCountryWithStateWithDistrict.get(countryCode).isEmpty()){
                     for(String countryName : mapWithCountryWithStateWithDistrict.get(countryCode).keySet()){
                         if(countryName.indexOf('I')==0){
+                            if(!mapWithCountryWithStateWithDistrict.get(countryCode).get(countryName).isEmpty()){
                             for(String state :mapWithCountryWithStateWithDistrict.get(countryCode).get(countryName).KeySet()){
                                 if(state.indexOf('R')==0){
+                                    if(!mapWithCountryWithStateWithDistrict.get(countryCode).get(countryName).get(state).isEmpty()){
                                     for(String district : mapWithCountryWithStateWithDistrict.get(countryCode).get(countryName).get(state)){
                                         if(district.indexOf('S')==0 &&district.length() >= 5){
                                             System.debug(countryCode+'=>'+countryName+ '=>'+state+ '=>'+district);
+                                                }
+                                            }
+                                        }
                                     }
                                 }
                             }
