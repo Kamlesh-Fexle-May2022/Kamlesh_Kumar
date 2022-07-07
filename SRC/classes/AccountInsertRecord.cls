@@ -17,18 +17,12 @@ public with sharing class AccountInsertRecord {
     **/
     public AccountInsertRecord() {
         Account acc = new Account();
-        acc.id ='0015i00000BDPHrAAP';
-        acc.Name = 'Shahil';
-        acc.AccountNumber = '324964587673';
-        acc.Phone = '5125562355';
-        System.debug(acc);
-        //insert acc;
-        //delete acc;
         List<Account> acc_4 = [SELECT Name FROM Account Where Name = 'Shahil'];
         for(Account accName : acc_4) {
             if(accName.Name.equals('Shahil')) {
                 accName.Name = 'Aron';
             }
         }
+        update acc;
     }
 }
