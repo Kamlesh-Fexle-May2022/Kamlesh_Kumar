@@ -44,17 +44,17 @@ public with sharing class AccountInsertRecord {
     } 
     public static void accountUpsertRecord(List<Account> accList) {
         if(!accList.isEmpty()){
-        Integer i=1;
-      	for(Account acc1 : accList)
-        {
-         acc1.Name = 'NewRecords in Upsert ' + i;
-         acc1.NumberOfEmployees = 1001;
-         i++;
+            Integer i=1;
+      	    for(Account acc1 : accList)
+            {
+                acc1.Name = 'NewRecords in Upsert ' + i;
+                acc1.NumberOfEmployees = 1001;
+                i++;
+            }
+            upsert accList;
+            for(Account acc2 : accList){
+                System.debug(acc2.Name + ' ' + acc2.NumberOfEmployees);
+            }
         }
-     	upsert accList;
-        for(Account acc2 : accList){
-            System.debug(acc2.Name + ' ' + acc2.NumberOfEmployees);
-        }
-      }
     }
 }
