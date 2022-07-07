@@ -15,19 +15,36 @@ public with sharing class AccountInsertRecord {
     *
     *   @revision Log   :   V1.1 - Created  - 07/04/2022 - Developer Name - Kamlesh Kumar
     **/
-    public AccountInsertRecord() {
-        Account acc = new Account();
-        acc.Name = 'Shahil';
-        acc.AccountNumber = '324964587673';
-        acc.Phone = '5125562355';
-        System.debug(acc);
-        insert acc;
-        List<Account> acc_4 = [SELECT Name FROM Account Where Name = 'Shahil'];
-        for(Account accName : acc_4) {
-            if(accName.Name.equals('Shahil')) {
-                accName.Name = 'Aron';
+    public static void accountInsertRecord() {
+        List<Account> accList = new List<Account>();
+            for(Integer i=1;i<20;i++)
+            {
+                Account a = new Account(Name = 'Test Account'+i);
+                accList.add(a);
             }
-        }
-        update acc;
+        insert accList;
+    }
+    
+    public static void accountUpdateRecord() {
+        List<Account> accList = [Select Name from Account where CreatedDate = TODAY];
+            for(Account a : accList)
+            {
+             	a.Name = a.Name + 'Update';
+            }
+        update accList;
+    }
+    
+    public static void accountUpsertRecord() {
+        List<Account> accList = [Select Name,NumberOfEmployees from Account where CreatedDate = TODAY];
+            for(Account a : accList)
+            {
+             	a.NumberOfEmployees = 1001;
+            }
+        	for(Integer i=0;i<=50;i++)
+            {
+                Account a = new Account(Name = 'NewRecords in Upsert'+i);
+                accList.add(a);
+            }
+        upsert accList;
     }
 }
