@@ -14,7 +14,7 @@ public with sharing class ParentChildSample {
     *
     *   @return         :   void
     *
-    *   @revision Log   :   V1.1 - Created  - 07/06/2022 - Developer Name - Kamlesh Kumar
+    *   @revision Log   :   V1.1 - Created  - 07/11/2022 - Developer Name - Kamlesh Kumar
     **/
     public static void InsertParentChild() {
         Date dt = Date.today()+7;
