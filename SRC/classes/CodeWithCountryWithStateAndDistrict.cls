@@ -15,7 +15,7 @@ public with sharing class CodeWithCountryWithStateAndDistrict {
     *
     *   @revision Log   :   V1.1 - Created  - 07/06/2022 - Developer Name - Kamlesh Kumar
     **/
-    public static void codeWithCountryWithStateAndDistrict() {
+    public static void findDistrictStateAndCountry() {
     
         map<String, Map<String, Map<String, List<String>>>> mapWithCountryWithStateWithDistrict = new map<String, Map<String, Map<String, List<String>>>>();
 
