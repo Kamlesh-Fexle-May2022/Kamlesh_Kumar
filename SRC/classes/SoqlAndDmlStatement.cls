@@ -32,7 +32,7 @@ public with sharing class SoqlAndDmlStatement {
 
         public static List<Account> accountUpdateRecord(List<Account> accList) {
         if(!accList.isEmpty()){
-            List<Account> accList1 = [Select Name from Account where CreatedDate = TODAY];
+            List<Account> accList1 = [Select Name from Account WHERE CreatedDate = TODAY];
             for(Account a : accList)
             {
               a.Name = a.Name + ' Update';
