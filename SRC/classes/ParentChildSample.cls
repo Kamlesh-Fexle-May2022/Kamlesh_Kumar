@@ -7,7 +7,7 @@
 *
 *  Revision Logs   :    V1.0 - Created - Kamlesh Kumar
 **/
-public with sharing class ParentChildSample {
+public with sharing class ParentChildRelationShip {
     /**
     *   @description    :  Insert parent Child Record Used only for foreign key reference
     *                       and doesn't contain any other fields. 
