@@ -27,9 +27,9 @@ public with sharing class SoqlAndDmlStatement {
             for(Account acc2 : lst){
                 System.debug(acc2.Name);
             }
-        accountUpsertRecord;
-        deletedRecord;
-        mergeRecord;
+        accountUpsertRecord(accList);
+        deletedRecord();
+        mergeRecord();
     }
 
     public static List<Account> accountUpdateRecord(List<Account> accList) {
