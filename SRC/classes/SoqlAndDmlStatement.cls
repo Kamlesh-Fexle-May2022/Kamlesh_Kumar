@@ -23,8 +23,8 @@ public with sharing class SoqlAndDmlStatement {
                 accList.add(a);
             }
             if(!accList.isEmpty())
-            insert accList;
-            List<Account> lst = SoqlAndDmlStatement.accountUpdateRecord(accList);
+                insert accList;
+                List<Account> lst = SoqlAndDmlStatement.accountUpdateRecord(accList);
             for(Account acc2 : lst){
                 System.debug(acc2.Name);
             }
@@ -41,8 +41,7 @@ public with sharing class SoqlAndDmlStatement {
                 a.Name = a.Name + ' Update';
             }
             update accList;
-            return accList;
-            
+            return accList;   
         }
     return accList;
     }
@@ -57,9 +56,9 @@ public with sharing class SoqlAndDmlStatement {
                 i++;
             }
             if(!accList.isEmpty())
-            upsert accList;
-            for(Account acc2 : accList){
-                System.debug(acc2.Name + ' ' + acc2.NumberOfEmployees);
+                upsert accList;
+                for(Account acc2 : accList){
+                    System.debug(acc2.Name + ' ' + acc2.NumberOfEmployees);
             }
         }
     }
@@ -78,7 +77,7 @@ public with sharing class SoqlAndDmlStatement {
             new Account(name='AccountMerge')
         };
         if(!ls.isEmpty())
-        insert ls;
+            insert ls;
 
         // Queries to get the inserted accounts 
         Account masterAcct = [SELECT Id, Name FROM Account WHERE Name = 'Account ' LIMIT 1];
@@ -88,7 +87,7 @@ public with sharing class SoqlAndDmlStatement {
         Contact c = new Contact(FirstName='Joe',LastName='Merged');
         c.AccountId = mergeAcct.Id;
         if(!c.isEmpty())
-        insert c;
+            insert c;
 
         try {
             merge masterAcct mergeAcct;
