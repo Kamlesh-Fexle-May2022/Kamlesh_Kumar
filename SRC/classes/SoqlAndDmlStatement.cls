@@ -24,7 +24,7 @@ public with sharing class SoqlAndDmlStatement {
             }
             if(!accList.isEmpty())
                 insert accList;
-                List<Account> lst = SoqlAndDmlStatement.accountUpdateRecord(accList);
+            List<Account> lst = SoqlAndDmlStatement.accountUpdateRecord(accList);
             for(Account acc2 : lst){
                 System.debug(acc2.Name);
             }
@@ -57,8 +57,8 @@ public with sharing class SoqlAndDmlStatement {
             }
             if(!accList.isEmpty())
                 upsert accList;
-                for(Account acc2 : accList){
-                    System.debug(acc2.Name + ' ' + acc2.NumberOfEmployees);
+            for(Account acc2 : accList){
+                System.debug(acc2.Name + ' ' + acc2.NumberOfEmployees);
             }
         }
     }
