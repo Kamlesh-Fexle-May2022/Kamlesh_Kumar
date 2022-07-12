@@ -22,6 +22,7 @@ public with sharing class SoqlAndDmlStatement {
                 Account a = new Account(Name = 'Account '+i);
                 accList.add(a);
             }
+            if(!accList.isEmpty())
             insert accList;
             List<Account> lst = SoqlAndDmlStatement.accountUpdateRecord(accList);
             for(Account acc2 : lst){
@@ -55,6 +56,7 @@ public with sharing class SoqlAndDmlStatement {
                 acc1.NumberOfEmployees = 1001;
                 i++;
             }
+            if(!accList.isEmpty())
             upsert accList;
             for(Account acc2 : accList){
                 System.debug(acc2.Name + ' ' + acc2.NumberOfEmployees);
@@ -74,7 +76,8 @@ public with sharing class SoqlAndDmlStatement {
         List<Account> ls = new List<Account>{
             new Account(name='Account'),
             new Account(name='AccountMerge')
-        };                                        
+        };
+        if(!ls.isEmpty())
         insert ls;
 
         // Queries to get the inserted accounts 
@@ -84,6 +87,7 @@ public with sharing class SoqlAndDmlStatement {
         // Add a contact to the account to be merged
         Contact c = new Contact(FirstName='Joe',LastName='Merged');
         c.AccountId = mergeAcct.Id;
+        if(!c.isEmpty())
         insert c;
 
         try {
