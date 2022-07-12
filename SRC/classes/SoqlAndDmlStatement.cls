@@ -63,8 +63,10 @@ public with sharing class SoqlAndDmlStatement {
 
     public static void deletedRecord(){
         List<Account> delAcc = [SELECT Name FROM Account WHERE Name = 'NewRecords in Upsert 3'];
-        delete delAcc;
-        System.debug('Deleted Record '+delAcc);
+         if(!delAcc.isEmpty()){
+            delete delAcc;
+            System.debug('Deleted Record '+delAcc);
+         }
     }
 
     public static void mergeRecord(){
