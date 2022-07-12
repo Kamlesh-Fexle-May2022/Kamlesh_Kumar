@@ -27,9 +27,9 @@ public with sharing class SoqlAndDmlStatement {
             for(Account acc2 : lst){
                 System.debug(acc2.Name);
             }
-        SoqlAndDmlStatement.accountUpsertRecord(accList);
-        SoqlAndDmlStatement.deletedRecord();
-        SoqlAndDmlStatement.mergeRecord();
+        accountUpsertRecord;
+        deletedRecord;
+        mergeRecord;
     }
 
     public static List<Account> accountUpdateRecord(List<Account> accList) {
@@ -41,6 +41,7 @@ public with sharing class SoqlAndDmlStatement {
             }
             update accList;
             return accList;
+            
         }
     return accList;
     }
