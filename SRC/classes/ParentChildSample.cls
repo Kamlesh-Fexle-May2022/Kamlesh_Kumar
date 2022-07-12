@@ -22,16 +22,11 @@ public with sharing class ParentChildSample {
             Name='OpportunityWithAccountInsert',
             StageName='Prospecting',
             CloseDate=dt);
-        
-        // Create the parent reference.
-        // Used only for foreign key reference
-        // and doesn't contain any other fields.
+       
         Account accountReference = new Account(
             MyExtID__c='SAP111111');                
         newOpportunity.Account = accountReference;
-        
-        // Create the Account object to insert.
-        // Same as above but has Name field.
+       
         // Used for the insert.
         Account parentAccount = new Account(
             Name='Hallie',
