@@ -14,7 +14,6 @@ public with sharing class DynamicMapFillAndSearch {
          mapOfCountriesAndStatesWithDistricts=singleQuaryMapFill();
          mapCountryStateAndDistrictSearch(searchword);
          countryJSONGenerator('India');
-         
      }
      // Map fill throught using  multiple Queries
      public static Map<String, Map<String, List<String>>> mapProcessing(){
@@ -27,7 +26,6 @@ public with sharing class DynamicMapFillAndSearch {
          List<District__c> ListOfDistricts = [Select Name,State__r.Country__r.Name,
          State__r.Name
          From District__c];
- 
          Map<String,List<String>> mapOfCountryWithStates = new Map<String,List<String>>();
          for(Country__c countries : ListOfCountries) {
              List<String> statesList = new List<String>();
@@ -45,12 +43,10 @@ public with sharing class DynamicMapFillAndSearch {
              }
          }
          System.debug('Presenting states with their countries' +mapOfCountryWithStates);
- 
          Map<String,List<String>> mapOfStatesWithDistricts = new Map<String,List<String>>();
          for(State__c states : ListOfStates) {
             List<String> ListOfDistrict = new List<String>();
              for(District__c districts : ListOfDistricts){
-                 
                  if (Districts.State__r.Name==states.Name){
                      ListOfDistrict.add(districts.Name);
                      if(mapOfStatesWithDistricts.containsKey(States.Name)){
@@ -63,12 +59,10 @@ public with sharing class DynamicMapFillAndSearch {
              }
          }
      System.debug('Presenting districts of states with their countries' +mapOfStatesWithDistricts);
- 
      Map<String, Map<String, List<String>>> mapOfCountriesAndStatesWithDistricts = new Map<String, Map<String, List<String>>>();
      for(String country : mapOfCountryWithStates.keySet()) {
          if(!mapOfCountriesAndStatesWithDistricts.containsKey(country)) 
              mapOfCountriesAndStatesWithDistricts.put(country, new Map<String, List<String>>());
-                                                     
              if(mapOfCountriesAndStatesWithDistricts.containsKey(country)) {
                  for(String state : mapOfCountryWithStates.get(country)) {
                      mapOfCountriesAndStatesWithDistricts.get(country).put(state, new List<String>());
@@ -104,11 +98,9 @@ public with sharing class DynamicMapFillAndSearch {
      }
      // country Name Total Numbers Of Disrtict And States JSON Generetor
      public static void countryJSONGenerator(String countryName) {
- 
-         List<Country__c> countries = [SELECT Name, Total_Number_of_Districts__c, Total_Number_of_States__c,            Country_Code__c, Country_JSON_Data__c 
+     List<Country__c> countries = [SELECT Name, Total_Number_of_Districts__c, Total_Number_of_States__c,Country_Code__c, Country_JSON_Data__c 
          FROM Country__c
          WHERE Name =:countryName ];
- 
          if(!countries.isEmpty()) {
              List<CountryStateJSONGenerator.States> states = new List<CountryStateJSONGenerator.States>();
              if(!mapOfCountriesAndStatesWithDistricts.get(countryName).keySet().isEmpty()){
@@ -133,10 +125,8 @@ public with sharing class DynamicMapFillAndSearch {
              countryWrapper.totalStatesNumber = (Integer)countries[0].Total_Number_of_States__c;
              countryWrapper.totalDistricts = (Integer)countries[0].Total_Number_of_Districts__c;
              countryWrapper.states = states;
- 
              System.debug(countryWrapper);
              System.debug(JSON.serialize(countryWrapper));
- 
              countries[0].Country_JSON_Data__c = JSON.serialize(countryWrapper);
              update countries[0];
          }
