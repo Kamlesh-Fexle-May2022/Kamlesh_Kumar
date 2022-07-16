@@ -2,6 +2,9 @@
 <Package xmlns="http://soap.sforce.com/2006/04/metadata">
     <types>
         <members>DreamWorld</members>
+	<members>CountryStateJSONGenerator</members>
+	<members>AggregateResults</members>
+	<members>DynamicMapFillAndSearch</members>
 	<members>SoqlAndDmlStatement</members>
 	<members>ParentChildSample</members>
 	<members>AccountInsertRecord</members>
@@ -41,6 +44,9 @@
     </types>
     <types>
         <members>Dream_World__c</members>
+	<members>Country__c</members>
+	<members>State__c</members>
+	<members>District__c</members>
 	<members>Hello__c</members>
 	<members>Student__c</members>
         <members>Account</members>
@@ -73,6 +79,9 @@
     </types>
     <types>
         <members>Dream_World__c</members>
+	<members>Country__c</members>
+	<members>State__c</members>
+	<members>District__c</members>
 	<members>Hello__c</members>
 	<members>Student__c</members>
  	<members>College__c</members>
