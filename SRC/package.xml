@@ -2,7 +2,7 @@
 <Package xmlns="http://soap.sforce.com/2006/04/metadata">
     <types>
         <members>DreamWorld</members>
-		<members>AccountTriggerHandler</members>
+	<members>AccountTriggerHandler</members>
 	<members>SoqlAndDmlStatement</members>
 	<members>ParentChildSample</members>
 	<members>AccountInsertRecord</members>
@@ -38,7 +38,7 @@
     </types>
     <types>
         <members>HelloWorldTrigger</members>
-		<members>AccountTrigger</members>
+	<members>AccountTrigger</members>
         <name>ApexTrigger</name>
     </types>
     <types>
