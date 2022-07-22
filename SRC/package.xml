@@ -2,6 +2,8 @@
 <Package xmlns="http://soap.sforce.com/2006/04/metadata">
     <types>
         <members>DreamWorld</members>
+	<members>AccountTriggerHandlerTests</members>
+	<members>AccountTriggerHandler</members>
 	<members>CountryStateJSONGenerator</members>
 	<members>AggregateResults</members>
 	<members>DynamicMapFillAndSearch</members>
@@ -40,6 +42,7 @@
     </types>
     <types>
         <members>HelloWorldTrigger</members>
+	<members>AccountTrigger</members>
         <name>ApexTrigger</name>
     </types>
     <types>
