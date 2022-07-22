@@ -33,6 +33,7 @@ private with sharing class AccountTriggerHandlerTests {
     private static void testSendEmail(){
         System.Test.startTest();
         	AccountTriggerHandler.sendEmail([Select Id, Name, Type, AccountNumber From Account]);
-       System.Test.stopTest();
+		System.assertEquals(1, Limits.getEmailInvocations(), 'Emails should be sent');
+        System.Test.stopTest();
     }
 }
