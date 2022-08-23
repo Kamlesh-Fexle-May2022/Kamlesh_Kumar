@@ -2,6 +2,8 @@
 <Package xmlns="http://soap.sforce.com/2006/04/metadata">
     <types>
         <members>DreamWorld</members>
+	<members>OpportunityTriggerHandlar</members>
+	<members>AccountTriggerHelper</members>
 	<members>AccountTriggerHandlerTests</members>
 	<members>AccountTriggerHandler</members>
 	<members>CountryStateJSONGenerator</members>
@@ -41,11 +43,18 @@
         <name>CustomField</name>
     </types>
     <types>
+	<members>Opportunity_Trigger</members>
+	<members>Account_Trigger</members>
         <members>HelloWorldTrigger</members>
 	<members>AccountTrigger</members>
         <name>ApexTrigger</name>
     </types>
     <types>
+	<members>Automobile_Presence_Sensor__c</members>
+	<members>Automobile_Sensor__c</members>
+	<members>Automobile_TDU__c</members>
+	<members>Automobile_Tag__c</members>
+	<members>Opportunity</members>
         <members>Dream_World__c</members>
 	<members>Country__c</members>
 	<members>State__c</members>
